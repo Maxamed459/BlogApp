@@ -1,0 +1,60 @@
+## Ignore build results
+bin/
+obj/
+
+## User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## VS Code settings (optional, if you're using it)
+.vscode/
+
+## Rider
+.idea/
+
+## Visual Studio backup files
+*.bak
+*.backup
+*.log
+
+## ASP.NET specific
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+
+## ASP.NET Core secrets
+secrets.json
+
+## Publish output
+publish/
+
+## .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# ASP.NET Identity
+App_Data/
+
+## .vs (Visual Studio folder)
+.vs/
+
+## npm packages
+node_modules/
+
+## Logs
+*.log
+
+## Environment config
+appsettings.*.json
+!appsettings.json
+
+# JetBrains Rider
+.idea/
+
+# Others
+*.DS_Store
+Thumbs.db
