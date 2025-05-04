@@ -37,7 +37,7 @@ project.fragment.lock.json
 artifacts/
 
 # ASP.NET Identity
-App_Data/
+Data
 
 ## .vs (Visual Studio folder)
 .vs/
@@ -50,7 +50,7 @@ node_modules/
 
 ## Environment config
 appsettings.*.json
-!appsettings.json
+appsettings.json
 
 # JetBrains Rider
 .idea/
