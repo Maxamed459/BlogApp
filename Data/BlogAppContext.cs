@@ -10,9 +10,8 @@ namespace BlogApp.Data
             : base(options)
         {}
 
-        public DbSet<Users> users { get; set; } = null!;
+        public DbSet<Users> Users { get; set; } = null!;
         public DbSet<BlogPost> BlogPosts { get; set; } = null!;
-        public DbSet<Comment> Comments { get; set; } = null!;
 
     }
 }

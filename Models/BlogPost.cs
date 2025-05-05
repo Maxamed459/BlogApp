@@ -23,8 +23,5 @@ namespace BlogApp.Models
         public Users Author { get; set; }
 
 
-        // A blog post can have many comments
-        public ICollection<Comment> Comments { get; set; }
-
     }
 }

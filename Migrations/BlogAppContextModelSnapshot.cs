@@ -55,36 +55,6 @@ namespace BlogApp.Migrations
                     b.ToTable("BlogPosts");
                 });
 
-            modelBuilder.Entity("BlogApp.Models.Comment", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("CommentText")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("Created_At")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("PostId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("PostId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Comments");
-                });
-
             modelBuilder.Entity("BlogApp.Models.Users", b =>
                 {
                     b.Property<int>("Id")
@@ -112,7 +82,7 @@ namespace BlogApp.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("users");
+                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("BlogApp.Models.BlogPost", b =>
@@ -124,30 +94,6 @@ namespace BlogApp.Migrations
                         .IsRequired();
 
                     b.Navigation("Author");
-                });
-
-            modelBuilder.Entity("BlogApp.Models.Comment", b =>
-                {
-                    b.HasOne("BlogApp.Models.BlogPost", "BlogPost")
-                        .WithMany("Comments")
-                        .HasForeignKey("PostId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("BlogApp.Models.Users", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("BlogPost");
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("BlogApp.Models.BlogPost", b =>
-                {
-                    b.Navigation("Comments");
                 });
 
             modelBuilder.Entity("BlogApp.Models.Users", b =>
