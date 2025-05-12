@@ -227,6 +227,6 @@ C:\Users\maxam\Desktop\University\cms6\Asp_net_core\projects\BlogApp\BlogApp\obj
 C:\Users\maxam\Desktop\University\cms6\Asp_net_core\projects\BlogApp\BlogApp\obj\Debug\net9.0\BlogApp.pdb
 C:\Users\maxam\Desktop\University\cms6\Asp_net_core\projects\BlogApp\BlogApp\obj\Debug\net9.0\BlogApp.genruntimeconfig.cache
 C:\Users\maxam\Desktop\University\cms6\Asp_net_core\projects\BlogApp\BlogApp\obj\Debug\net9.0\ref\BlogApp.dll
-C:\Users\maxam\Desktop\University\cms6\Asp_net_core\projects\BlogApp\BlogApp\obj\Debug\net9.0\compressed\pn8uwchdow-5pll2cqe9t.gz
-C:\Users\maxam\Desktop\University\cms6\Asp_net_core\projects\BlogApp\BlogApp\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Users\maxam\Desktop\University\cms6\Asp_net_core\projects\BlogApp\BlogApp\obj\Debug\net9.0\BlogApp.sourcelink.json
+C:\Users\maxam\Desktop\University\cms6\Asp_net_core\projects\BlogApp\BlogApp\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\maxam\Desktop\University\cms6\Asp_net_core\projects\BlogApp\BlogApp\obj\Debug\net9.0\compressed\pn8uwchdow-jmgkpjbm11.gz

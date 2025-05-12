@@ -30,8 +30,9 @@ namespace BlogApp.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("AuthorId")
-                        .HasColumnType("int");
+                    b.Property<string>("Category")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Content")
                         .IsRequired()
@@ -49,8 +50,6 @@ namespace BlogApp.Migrations
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("AuthorId");
 
                     b.ToTable("BlogPosts");
                 });
@@ -83,22 +82,6 @@ namespace BlogApp.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
-                });
-
-            modelBuilder.Entity("BlogApp.Models.BlogPost", b =>
-                {
-                    b.HasOne("BlogApp.Models.Users", "Author")
-                        .WithMany("BlogPosts")
-                        .HasForeignKey("AuthorId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Author");
-                });
-
-            modelBuilder.Entity("BlogApp.Models.Users", b =>
-                {
-                    b.Navigation("BlogPosts");
                 });
 #pragma warning restore 612, 618
         }

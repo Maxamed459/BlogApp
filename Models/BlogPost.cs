@@ -13,15 +13,10 @@ namespace BlogApp.Models
 
         [Required]
         public string Content { get; set; } = string.Empty;
+        [Required]
+        public string Category { get; set; } = string.Empty;
 
         public DateTime Created_At { get; set; } = DateTime.Now;
         public DateTime Updated_At { get; set; } = DateTime.Now;
-
-        // Foreign key to User (Author)
-        [ForeignKey("Author")]
-        public int AuthorId { get; set; }
-        public Users Author { get; set; }
-
-
     }
 }

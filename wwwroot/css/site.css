@@ -102,3 +102,17 @@ body {
     background-size: cover;
     background-position: center;
 }
+
+.nav-bg {
+    background-color: #000b58;
+    color: white;
+}
+.btn-signin {
+    background-color: #ffdb59;
+    color: #000b58;
+    border: none;
+    padding: 8px 30px;
+    font-weight: 500;
+    border-radius: 50px;
+    text-align: center;
+}

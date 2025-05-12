@@ -4,7 +4,7 @@ namespace BlogApp.Controllers
 {
     public class UsersController : Controller
     {
-        public IActionResult Index()
+        public IActionResult RegisterUser()
         {
             return View();
         }

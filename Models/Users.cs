@@ -16,7 +16,6 @@ namespace BlogApp.Models
         public string Password { get; set; } = string.Empty;
 
         public DateTime Created_At { get; set; } = DateTime.Now;
-        public ICollection<BlogPost> BlogPosts { get; set; }
 
     }
 }

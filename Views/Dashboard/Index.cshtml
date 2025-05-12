@@ -1,121 +1,78 @@
-﻿@{
-    ViewData["Title"] = "Dashboard Page";
+﻿@model IEnumerable<BlogApp.Models.BlogPost>
+@{ 
+    ViewData["Title"] = "Dashboard Page"; 
 }
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous" />
+rel="stylesheet"
+integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+crossorigin="anonymous" />
 <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer" />
-    <div class="d-flex">
-        <div class="my vh-100 pt-3" style="width: 230px">
-            <div class="max-auto pb-4">
-                <img class="dash-logo pt-3 px-2" src="/img/logo-wbg.png" alt="" />
-            </div>
-            <div class="dash-links">
-                <i class="fa-solid fa-gauge px-2 dashIcon"></i>
-                <a asp-controller="Dashboard" asp-action="Index">Dashboard</a>
-            </div>
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+crossorigin="anonymous"
+referrerpolicy="no-referrer" />
+<div class="d-flex">
+    <div class="my vh-100 pt-3" style="width: 230px">
         <div class="dash-links">
-                <i class="fa-solid fa-pen-to-square px-2"></i>
-                <a asp-controller="Dashboard" asp-action="NewPost"> New Post</a>
-            </div>
-        <div class="dash-links">
-                <i class="fa-solid fa-magnifying-glass px-2"></i>
-                Browse Post
-            </div>
-        <div class="dash-links">
-                <i class="fa-solid fa-layer-group px-2"></i>
-                Category
-            </div>
-        <div class="dash-links">
-                <i class="fa-solid fa-chart-simple px-2"></i>
-                Anaylaytics
-            </div>
-        <div class="dash-links">
-                <i class="fa-regular fa-user px-2"></i>
-                Users
-            </div>
-            <!-- sidebar -->
+            <i class="fa-solid fa-gauge px-2 dashIcon"></i>
+            <a asp-controller="Dashboard" asp-action="Index">Dashboard</a>
         </div>
+        <div class="dash-links">
+            <i class="fa-solid fa-pen-to-square px-2"></i>
+            <a asp-controller="Dashboard" asp-action="NewPost"> New Post</a>
+        </div>
+        <div class="dash-links">
+            <i class="fa-solid fa-magnifying-glass px-2"></i>
+            Browse Post
+        </div>
+        <div class="dash-links">
+            <i class="fa-solid fa-layer-group px-2"></i>
+            Category
+        </div>
+        <div class="dash-links">
+            <i class="fa-solid fa-chart-simple px-2"></i>
+            Anaylaytics
+        </div>
+        <div class="dash-links">
+            <i class="fa-regular fa-user px-2"></i>
+            Users
+        </div>
+        <!-- sidebar -->
+    </div>
 
-        <div class="w-100">
-            <div class="m-4">
-                <div class="row">
-                    <div class="col-3">
-                        <div class="card p-3 card1">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <i class="fa-solid fa-user-doctor px-2 txt"></i>
-                                    </div>
-                                    <div class="col-6">
-                                        <h3>50</h3>
-                                    </div>
-                                    <div class="col-6">
-                                        <h5>Doctors</h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card p-3 card2">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <i class="fa-solid fa-user-doctor px-2 txt"></i>
-                                    </div>
-                                    <div class="col-6">
-                                        <h3>50</h3>
-                                    </div>
-                                    <div class="col-6">
-                                        <h5>Doctors</h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card p-3 card1">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <i class="fa-solid fa-user-doctor px-2 txt"></i>
-                                    </div>
-                                    <div class="col-6">
-                                        <h3>50</h3>
-                                    </div>
-                                    <div class="col-6">
-                                        <h5>Doctors</h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card p-3 card2">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <i class="fa-solid fa-user-doctor px-2 txt"></i>
-                                    </div>
-                                    <div class="col-6">
-                                        <h3>50</h3>
-                                    </div>
-                                    <div class="col-6">
-                                        <h5>Doctors</h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- My content -->
+    <div class="w-100">
+        <div class="m-4">
+            <div class="m-5">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Title</th>
+                            <th>Category</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @foreach(var post in Model) 
+                        { 
+                             <tr> 
+                                 <td>@post.Id</td> 
+                                 <td>@post.Title</td> 
+                                 <td>@post.Category</td> 
+                                 <td>@post.Created_At</td>
+                                <td>
+                                    <button class="btn btn-info">
+                                        <a asp-controller="Dashboard" asp-action="View" asp-route-id="@post.Id">View Post</a>
+                                    </button>
+                                </td>
+                             </tr> 
+                         }
+
+                    </tbody>
+                </table>
+            </div>
             </div>
         </div>
     </div>
