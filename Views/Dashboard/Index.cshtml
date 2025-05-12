@@ -43,35 +43,20 @@ referrerpolicy="no-referrer" />
 
     <div class="w-100">
         <div class="m-4">
-            <div class="m-5">
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Title</th>
-                            <th>Category</th>
-                            <th>Date</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
+            <div class="m-5 d-flex gap-4">
+                
                         @foreach(var post in Model) 
-                        { 
-                             <tr> 
-                                 <td>@post.Id</td> 
-                                 <td>@post.Title</td> 
-                                 <td>@post.Category</td> 
-                                 <td>@post.Created_At</td>
-                                <td>
-                                    <button class="btn btn-info">
-                                        <a asp-controller="Dashboard" asp-action="View" asp-route-id="@post.Id">View Post</a>
-                                    </button>
-                                </td>
-                             </tr> 
+                        {
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">@post.Title</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">@post.Category</h6>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">@post.Created_At</h6>
+                            <p class="card-text h-50">@post.Content</p>
+                            <a asp-controller="Dashboard" asp-action="View" class="card-link">View Post -></a>
+                        </div>
+                    </div>
                          }
-
-                    </tbody>
-                </table>
             </div>
             </div>
         </div>
