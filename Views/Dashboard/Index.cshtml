@@ -52,7 +52,9 @@ referrerpolicy="no-referrer" />
                             <h5 class="card-title">@post.Title</h5>
                             <h6 class="card-subtitle mb-2 text-body-secondary">@post.Category</h6>
                             <h6 class="card-subtitle mb-2 text-body-secondary">@post.Created_At</h6>
-                            <p class="card-text h-50">@post.Content</p>
+                            <p class="card-text text-truncate" style="max-height: 4.5em; overflow: hidden;">
+                                @(post.Content.Length > 100 ? post.Content.Substring(0, 100) + "..." : post.Content)
+                            </p>
                             <a asp-controller="Dashboard" asp-action="View" class="card-link">View Post -></a>
                         </div>
                     </div>
